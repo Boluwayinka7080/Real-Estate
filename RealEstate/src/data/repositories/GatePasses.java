@@ -23,20 +23,16 @@ public class GatePasses implements GatePassRepo {
     }
 
     @Override
-    public GatePass save(GatePass pass) {
+    public void  savePass(GatePass pass) {
         if (pass.getId() == 0) {
             pass.setId(nextId++);
             gatePasses.add(pass);
         } else {
             GatePass existing = findById(pass.getId());
             if (existing != null) {
-                int index = gatePasses.indexOf(existing);
-                gatePasses.set(index, pass);
-            } else {
                 gatePasses.add(pass);
             }
         }
-        return pass;
     }
 
     @Override

@@ -29,9 +29,6 @@ public class Visitor implements VisitorRepo {
         } else {
             data.models.Visitor existing = findById(visitor.getId());
             if (existing != null) {
-                int index = visitors.indexOf(existing);
-                visitors.set(index, visitor);
-            } else {
                 visitors.add(visitor);
             }
         }
