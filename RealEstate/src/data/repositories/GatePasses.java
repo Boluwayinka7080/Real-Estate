@@ -9,6 +9,7 @@ public class GatePasses implements GatePassRepo {
 
     @Override
     public List<GatePass> findAll() {
+
         return new ArrayList<>(gatePasses);
     }
 

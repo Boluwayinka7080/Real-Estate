@@ -8,6 +8,7 @@ public class Visitor implements VisitorRepo {
 
     @Override
     public List<data.models.Visitor> findAll() {
+
         return new ArrayList<>(visitors);
     }
 

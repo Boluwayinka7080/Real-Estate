@@ -36,7 +36,7 @@ class GatePassesTest {
     }
 
     @Test
-    void thatWhenIDeleteAPass_ItReducesByOne() {
+    void thatWhenIDeleteAPass_ItReducesByNumberOfTimesDeleted() {
         int passTotal = gatePasses.count();
         Assertions.assertEquals(0,passTotal);
 
@@ -48,11 +48,13 @@ class GatePassesTest {
         passTotal = gatePasses.count();
         gatePasses.delete(gatepass);
         gatePasses.delete(gatepass);
-        
+        passTotal = gatePasses.count();
+        Assertions.assertEquals(2,passTotal);
     }
 
     @Test
-    void delete() {
+    void testThatICanDeleteById() {
+        int passTotal = get
     }
 
     @Test
